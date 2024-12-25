@@ -1,22 +1,23 @@
 import React from 'react';
+import Image from 'next/image';
 
 const TopCategories = () => {
   const categories = [
     {
       title: 'Wing Chair',
       products: '3,204 PRODUCTS',
-      image: 'update.jpeg', // Replace with the actual image path
+      image: '/update.jpeg', 
     },
     {
       title: 'Wooden Chair',
       products: '12 PRODUCTS',
-      image: 'thepic.png', // Replace with the actual image path
+      image: '/thepic.png', 
     },
     {
       title: 'Desk Chair',
       products: '34 PRODUCTS',
-      image: 'pdct.jpeg', // Replace with the actual image path
-    },
+      image: '/pdct.jpeg', 
+    }
   ];
 
   return (
@@ -28,14 +29,14 @@ const TopCategories = () => {
             key={index}
             className="relative rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300"
           >
-            <img
+            <Image
               src={category.image}
               alt={category.title}
               className="w-full h-[300px] object-cover"
+              width={500}  
+              height={300}
             />
-          <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-black/40 p-2 text-white">
-
-
+            <div className="absolute bottom-0 w-full bg-gradient-to-t from-black via-black/80 to-black/40 p-2 text-white">
               <h3 className="text-lg font-medium">{category.title}</h3>
               <p className="text-sm">{category.products}</p>
             </div>
@@ -47,6 +48,7 @@ const TopCategories = () => {
 };
 
 export default TopCategories;
+
 
 
 

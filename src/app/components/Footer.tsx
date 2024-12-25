@@ -1,4 +1,5 @@
 import React from "react";
+import Image from 'next/image';
 import {
   FaFacebookF,
   FaTwitter,
@@ -16,12 +17,13 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="flex flex-col w-full md:w-[320px] items-start">
             <div className="flex items-center gap-2">
-              <img
-                src="Logo icon.png"
-                alt="Logo"
-                style={{ color: '#029FAE', fontSize: '40px' }}
-                className="ml-1 text-xl"
-              />
+            <Image
+               src="/Logo icon.png"  
+               alt="Logo"
+               width={40}            
+               height={40}                  
+                        className="ml-1 text-xl"     
+             />
               <span className="text-[#272343] text-[26px] font-bold">
                 Comforty
               </span>

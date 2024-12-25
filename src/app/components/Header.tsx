@@ -1,6 +1,7 @@
 
 import { FiShoppingCart } from "react-icons/fi";
 import Link from "next/link";
+import Image from 'next/image';
 
 const Header = () => {
   return (
@@ -8,11 +9,13 @@ const Header = () => {
       <div className="max-w-screen-xl mx-auto flex flex-col sm:flex-row justify-between items-center px-4 sm:px-6 lg:px-8 space-y-4 sm:space-y-0">
         {/* Logo Section */}
         <div className="flex items-center space-x-3">
-          <img
-            src="Logo Icon.png"
-            alt="Comforty Logo"
-            className="w-10 h-10 ml-4 sm:ml-10"
-          />
+        <Image
+      src="/Logo Icon.png"  
+      alt="Comforty Logo"
+      width={40}                   
+      height={40}                  
+      className="w-10 h-10 ml-4 sm:ml-10" 
+    />
           <h2 className="text-[22px] sm:text-[26px] font-medium">Comforty</h2>
         </div>
 
